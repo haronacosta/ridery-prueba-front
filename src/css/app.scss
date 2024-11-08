@@ -1,1 +1,27 @@
 // app global css in SCSS form
+.responsive-select {
+  min-width: 200px; /* Establecer el ancho mínimo */
+  max-width: 300px; /* Establecer el ancho máximo para evitar que se extienda demasiado */
+  white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+  overflow: hidden; /* Ocultar el desbordamiento del texto */
+  text-overflow: ellipsis; /* Mostrar '...' si el texto es demasiado largo */
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .responsive-select {
+    min-width: 120px; /* Ajustar el ancho mínimo para pantallas pequeñas */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .responsive-select {
+    min-width: 150px; /* Ajustar el ancho mínimo para pantallas medianas */
+  }
+}
+
+@media (min-width: 1025px) {
+  .responsive-select {
+    min-width: 200px; /* Ajustar el ancho mínimo para pantallas grandes */
+  }
+}
